@@ -1,0 +1,31 @@
+{
+  "name": "electron-prove",
+  "version": "1.0.0",
+  "description": "Aplicacion De Prueba",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MRCL12345/electron.git"
+  },
+  "keywords": [
+    "Electron",
+    "Escritorio",
+    "Prueba",
+    "Windows"
+  ],
+  "author": "Defkalion",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MRCL12345/electron/issues"
+  },
+  "homepage": "https://github.com/MRCL12345/electron#readme",
+  "dependencies": {
+    "electron": "^18.2.0"
+  },
+  "devDependencies": {
+    "electron": "^18.2.0"
+  }
+}
