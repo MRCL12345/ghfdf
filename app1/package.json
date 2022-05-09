@@ -6,10 +6,7 @@
   "scripts": {
     "start": "electron ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MRCL12345/electron.git"
-  },
+  "repository": {},
   "keywords": [
     "Electron",
     "Escritorio",
@@ -18,10 +15,7 @@
   ],
   "author": "Defkalion",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MRCL12345/electron/issues"
-  },
-  "homepage": "https://github.com/MRCL12345/electron#readme",
+  "bugs": {},
   "dependencies": {
     "electron": "^18.2.0"
   },

@@ -1,5 +1,6 @@
 const { app, BrowserWindow } = require("electron");
 const path = require("path");
+
 function ventana() {
   let principal = new BrowserWindow({
     width: 800,
@@ -8,16 +9,17 @@ function ventana() {
       preload: path.join(__dirname, "preload.js"),
     },
   });
-  principal.loadFile("index.html");
+
+  principal.loadFile("src/index.html");
+  principal.on("close", () => {
+    app.quit();
+  });
 }
+
 app.whenReady().then(ventana);
+
 app.on("window-all-closed", function () {
   if (process.platform === "darwin") {
     app.quit();
-  }
-});
-app.on("activate", function () {
-  if (BrowserWindow.getAllWindows().length === 0) {
-    ventana();
   }
 });
