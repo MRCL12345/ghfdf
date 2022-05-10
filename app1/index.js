@@ -17,8 +17,19 @@ function ventana() {
   principal.on("close", () => {
     app.quit();
   });
+  // Buttons CLOSE,MINIMZE,MAXIMIZE
   ipc.on("closeApp", () => {
-    console.log("close ap");
+    principal.close();
+  });
+  ipc.on("minimizeApp", () => {
+    principal.minimize();
+  });
+  ipc.on("maximizeApp", () => {
+    if (principal.isMaximized()) {
+      principal.restore();
+    } else {
+      principal.maximize();
+    }
   });
 }
 
