@@ -6,13 +6,21 @@ if (typeof window !== "undefined") {
   const closeBtn = document.getElementById("closeBtn");
   const minimizeBtn = document.getElementById("minimizeBtn");
   const maximizeBtn = document.getElementById("maxResBtn");
+
   closeBtn.addEventListener("click", () => {
     ipc.send("closeApp");
   });
+
   minimizeBtn.addEventListener("click", () => {
     ipc.send("minimizeApp");
   });
+
   maximizeBtn.addEventListener("click", () => {
     ipc.send("maximizeApp");
   });
 }
+/*
+window.onload=function(){
+  -- put your code here
+}
+ */

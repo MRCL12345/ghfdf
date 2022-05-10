@@ -13,7 +13,7 @@ function ventana() {
     },
   });
 
-  principal.loadFile("src/index.html");
+  principal.loadFile("src/views/index.html");
   principal.on("close", () => {
     app.quit();
   });
