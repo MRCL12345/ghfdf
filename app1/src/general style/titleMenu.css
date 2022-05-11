@@ -82,13 +82,13 @@
   background-color: #4f9fee;
 }
 .titleBarBtns > .minimizeBtn {
-  background-image: url("../img/minimize.svg");
+  background-image: url("../general img/minimize.svg");
 }
 .titleBarBtns > .maximizeBtn {
-  background-image: url("../img/size.svg");
+  background-image: url("../general img/size.svg");
 }
 .titleBarBtns > .closeBtn {
-  background-image: url("../img/close.svg");
+  background-image: url("../general img/close.svg");
 }
 .mainApp > .contentArea {
   display: flex;
