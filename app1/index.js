@@ -31,10 +31,21 @@ function ventana() {
       principal.maximize();
     }
   });
+  cargando();
 }
 
-app.whenReady().then(ventana);
-
+function cargando() {
+  let cargando = new BrowserWindow({
+    width: 200,
+    maxWidth: 200,
+    height: 150,
+    maxHeight: 150,
+    frame: false,
+    center: true,
+  });
+  cargando.loadFile("src/views/loading.html");
+}
+app.whenReady().then(cargando);
 app.on("window-all-closed", function () {
   if (process.platform === "darwin") {
     app.quit();

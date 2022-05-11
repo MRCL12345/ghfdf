@@ -1,0 +1,42 @@
+.all {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.img {
+  width: 100%;
+  height: 100px;
+  content: url("../img/flecha.svg");
+  animation-name: img;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+.img2 {
+  width: 100%;
+  height: 100px;
+  display: none;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-name: img2;
+}
+@keyframes img {
+  50% {
+    content: url("../img/flecha.svg");
+  }
+  90% {
+    content: url("../img/flechas.svg");
+  }
+  100% {
+    display: none;
+  }
+}
+
+.loading2 {
+  font-size: larger;
+  animation-name: loading2;
+  animation-duration: 1s;
+}
+@keyframes loading2 {
+  50% {
+  }
+}

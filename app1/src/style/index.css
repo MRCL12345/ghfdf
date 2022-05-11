@@ -1,0 +1,45 @@
+/*! CAJAS */
+.cajas {
+  margin-inline: 10px;
+}
+/*/ caja*/
+.caja {
+  background: rgb(238, 238, 238);
+  width: 150px;
+  height: 50px;
+  padding: 20px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: flex-end;
+  float: left;
+  margin: 50px 0 10px 5px;
+}
+/*img caja*/
+.caja img {
+  top: -50px;
+  vertical-align: top;
+  position: absolute;
+  width: 150px;
+  height: 80px;
+}
+/*botones btns caja*/
+.caja .btns-caja {
+  text-align: left;
+  vertical-align: bottom;
+}
+.btns-caja .btn-caja-1 {
+  text-decoration: none;
+  padding: 10px;
+  padding-inline: 15px;
+  background: rgb(52, 101, 216);
+  color: white;
+}
+.btns-caja .btn-caja-2 {
+  text-decoration: none;
+  padding: 10px;
+  padding-inline: 15px;
+  background: rgb(167, 170, 175);
+  color: white;
+}
