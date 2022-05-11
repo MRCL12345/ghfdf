@@ -11,14 +11,6 @@
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
-.img2 {
-  width: 100%;
-  height: 100px;
-  display: none;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-  animation-name: img2;
-}
 @keyframes img {
   50% {
     content: url("../img/flecha.svg");
@@ -33,10 +25,4 @@
 
 .loading2 {
   font-size: larger;
-  animation-name: loading2;
-  animation-duration: 1s;
-}
-@keyframes loading2 {
-  50% {
-  }
 }
