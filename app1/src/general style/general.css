@@ -7,3 +7,12 @@ body {
   color: #949aa7;
   background-color: #2c313c;
 }
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+h4,
+h5 {
+  font-size: small;
+}

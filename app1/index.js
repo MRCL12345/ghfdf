@@ -1,11 +1,11 @@
-const { app, BrowserWindow, ipcMain } = require("electron");
+const { app, BrowserWindow, ipcMain, shell } = require("electron");
 const path = require("path");
 const ipc = ipcMain;
 
 function index() {
-  let index = new BrowserWindow({
-    width: 800,
-    height: 600,
+  var index_page = new BrowserWindow({
+    width: 600,
+    height: 300,
     frame: false,
     webPreferences: {
       contextIsolation: false,
@@ -13,14 +13,28 @@ function index() {
       preload: path.join(__dirname, "preload.js"),
     },
   });
-  index.loadFile("src/pages/index/index.html");
-  index.on("close", () => {
+  index_page.loadFile("src/pages/index/index.html");
+  index_page.on("close", () => {
     app.quit();
+  });
+  // Buttons CLOSE,MINIMZE,MAXIMIZE
+  ipc.on("closeApp", () => {
+    index_page.close();
+  });
+  ipc.on("minimizeApp", () => {
+    index_page.minimize();
+  });
+  ipc.on("maximizeApp", () => {
+    if (index_page.isMaximized()) {
+      index_page.restore();
+    } else {
+      index_page.maximize();
+    }
   });
 }
 
 function loading() {
-  let loading = new BrowserWindow({
+  var loading_page = new BrowserWindow({
     width: 200,
     maxWidth: 200,
     height: 150,
@@ -28,27 +42,12 @@ function loading() {
     frame: false,
     center: true,
   });
-  loading.loadFile("src/pages/loading");
+  loading_page.loadFile("src/pages/loading/loading.html");
   setTimeout(() => {
-    loading.close();
+    loading_page.close();
     index();
-  }, 4000);
+  }, 5000);
 }
-
-// Buttons CLOSE,MINIMZE,MAXIMIZE
-ipc.on("closeApp", () => {
-  index.close();
-});
-ipc.on("minimizeApp", () => {
-  index.minimize();
-});
-ipc.on("maximizeApp", () => {
-  if (index.isMaximized()) {
-    index.restore();
-  } else {
-    index.maximize();
-  }
-});
 
 app.on("window-all-closed", function () {
   if (process.platform === "darwin") {
