@@ -2,7 +2,7 @@ h5 {
   text-align: center;
   margin: 0;
 }
-body {
+.grid {
   text-align: center;
 }
 .content {
@@ -10,14 +10,15 @@ body {
   border-radius: 7px;
   width: 200px;
   height: 100px;
-  margin-inline: 10px;
+  margin-inline: 30px;
   padding: 10px;
   display: inline-block;
-  text-align: center;
 }
 .access {
-  padding: 5px;
   margin: auto;
   display: list-item;
-  margin-top: 20px;
+  background-color: rgb(164, 164, 164);
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
 }

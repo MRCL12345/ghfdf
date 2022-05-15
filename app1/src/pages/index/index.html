@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
   <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <!--CSS-->
   <link rel="stylesheet" href="style/index.css">
   <link rel="stylesheet" href="../../general style/general.css">
@@ -17,50 +19,39 @@
   <div class="mainApp">
     <div class="topBar">
       <div class="titleBar">
+        <button id="showHideMenus" class="toggleButton"></button>
         <div class="title">
           Valhalla
         </div>
       </div>
       <div class="titleBarBtns">
         <button id="minimizeBtn" class="topBtn minimizeBtn"></button>
+        <!-- <button id="maxResBtn" class="topBtn maximizeBtn"></button> -->
         <button id="closeBtn" class="topBtn closeBtn"></button>
       </div>
     </div>
   </div>
   <!--!-------------------->
-  <h3>Bienvenido a Valhalla</h4>
-    <div class="content">
-      <h5>¿Qué es Valhalla?</h5>
-      <p>
-        Valhalla es programa del grupo diseñado y dirigido para objetivos dev principalmente del servidor oficial de
-        discord
-      </p>
-    </div>
-    <!---->
-    <div class="content">
-      <h5>¿Cómo ingreso al programa?</h5>
-      <p>
-        Mediante la descarga de este programa podras accesar a la API y datos del bot Valhalla y su sistema
-      </p>
-    </div>
-    <!---->
-    <button class="access">Access</button>
-    <!--!--------SCRIPTS------------>
-    <script src="../../general scripts/titlebar.js"></script>
+  <section class="grid">
+    <h3>Bienvenido a Valhalla</h4>
+      <div class="content">
+        <h5>¿Qué es Valhalla?</h5>
+        <p>
+          Valhalla es programa del grupo diseñado y dirigido para objetivos dev principalmente del servidor oficial de
+          discord
+        </p>
+      </div>
+      <div class="content">
+        <h5>¿Cómo ingreso al programa?</h5>
+        <p>
+          Mediante la descarga de este programa podras accesar a la API y datos del bot Valhalla y su sistema
+        </p>
+      </div>
+      <!---->
+      <button class="access" id="access">Access</button>
+  </section>
+  <!--!--------SCRIPTS------------>
+  <script src="../../general scripts/titlebar.js"></script>
 </body>
 
 </html>
-<!-- <div class="mainApp">
-    <div class="topBar">
-      <div class="titleBar">
-        <div class="title">
-          Valhalla
-        </div>
-      </div>
-      <div class="titleBarBtns">
-        <button id="minimizeBtn" class="topBtn minimizeBtn"></button>
-        <button id="maxResBtn" class="topBtn maximizeBtn"></button>
-        <button id="closeBtn" class="topBtn closeBtn"></button>
-      </div>
-    </div>
-  </div> -->

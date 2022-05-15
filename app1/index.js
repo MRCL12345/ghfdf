@@ -5,8 +5,13 @@ const ipc = ipcMain;
 function index() {
   var index_page = new BrowserWindow({
     width: 600,
+    minWidth: 600,
+    maxWidth: 600,
     height: 300,
+    maxHeight: 300,
+    minHeight: 300,
     frame: false,
+    center: true,
     webPreferences: {
       contextIsolation: false,
       nodeIntegration: true,
@@ -17,6 +22,7 @@ function index() {
   index_page.on("close", () => {
     app.quit();
   });
+
   // Buttons CLOSE,MINIMZE,MAXIMIZE
   ipc.on("closeApp", () => {
     index_page.close();
@@ -24,12 +30,8 @@ function index() {
   ipc.on("minimizeApp", () => {
     index_page.minimize();
   });
-  ipc.on("maximizeApp", () => {
-    if (index_page.isMaximized()) {
-      index_page.restore();
-    } else {
-      index_page.maximize();
-    }
+  ipc.on("access", () => {
+    console.log("a");
   });
 }
 
@@ -56,3 +58,4 @@ app.on("window-all-closed", function () {
 });
 
 app.whenReady().then(loading);
+/*http://127.0.0.1:3000/app1/src/img/close.svg */
