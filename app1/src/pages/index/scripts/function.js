@@ -4,4 +4,7 @@ if (typeof window !== "undefined") {
   const ipc = ipcRenderer;
 
   const boton = document.getElementById("access");
+  boton.addEventListener("click", () => {
+    console.log("a");
+  });
 }
