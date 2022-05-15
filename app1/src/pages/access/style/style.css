@@ -15,12 +15,16 @@ h5 {
   display: inline-block;
 }
 .access {
-  margin: auto;
   display: list-item;
   background-color: rgb(164, 164, 164);
-  border: none;
   border-radius: 3px;
   padding: 5px;
+  width: 50px;
+  margin: auto;
+  margin-top: 15px;
+  list-style: none;
+  text-decoration: none;
+  color: black;
 }
 .access:active {
   background-color: white;

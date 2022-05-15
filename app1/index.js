@@ -2,8 +2,8 @@ const { app, BrowserWindow, ipcMain, shell } = require("electron");
 const path = require("path");
 const ipc = ipcMain;
 
-function index() {
-  var index_page = new BrowserWindow({
+function acces() {
+  var access_page = new BrowserWindow({
     width: 600,
     minWidth: 600,
     maxWidth: 600,
@@ -18,17 +18,17 @@ function index() {
       preload: path.join(__dirname, "preload.js"),
     },
   });
-  index_page.loadFile("src/pages/index/index.html");
-  index_page.on("close", () => {
+  access_page.loadFile("src/pages/access/access.html");
+  access_page.on("close", () => {
     app.quit();
   });
 
   // Buttons CLOSE,MINIMZE,MAXIMIZE
   ipc.on("closeApp", () => {
-    index_page.close();
+    access_page.close();
   });
   ipc.on("minimizeApp", () => {
-    index_page.minimize();
+    access_page.minimize();
   });
 }
 
@@ -44,7 +44,7 @@ function loading() {
   loading_page.loadFile("src/pages/loading/loading.html");
   setTimeout(() => {
     loading_page.close();
-    index();
+    acces();
   }, 5000);
 }
 
