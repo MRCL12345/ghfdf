@@ -30,9 +30,6 @@ function index() {
   ipc.on("minimizeApp", () => {
     index_page.minimize();
   });
-  ipc.on("access", () => {
-    console.log("a");
-  });
 }
 
 function loading() {
